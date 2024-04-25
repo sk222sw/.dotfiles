@@ -39,6 +39,10 @@ return {
         capabilities = capabilities
       })
 
+      lspconfig.tailwindcss.setup({
+        capabilities = capabilities
+      })
+
       vim.opt.signcolumn = "yes" -- keep the gutter open to prevent editor from horizontally jumping
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
