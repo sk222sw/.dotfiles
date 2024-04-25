@@ -23,11 +23,8 @@ return {
     lazy = false,
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      -- local on_attach = require('cmp_nvim_lsp').def
 
       local lspconfig = require("lspconfig")
-
-      -- vim.lsp.diagnostic.disable()
 
       lspconfig.tsserver.setup({
         capabilities = capabilities,
