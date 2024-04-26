@@ -1,7 +1,8 @@
 return {
-  "folke/flash.nvim",
-  event = "VeryLazy",
-  opts = {},
+	"folke/flash.nvim",
+	-- enabled = false,
+	event = "VeryLazy",
+	opts = {},
   -- stylua: ignore
   keys = {
     { "<leader>fj", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },

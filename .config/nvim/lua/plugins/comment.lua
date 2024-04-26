@@ -1,9 +1,10 @@
 return {
-  {
-    'numToStr/Comment.nvim',
-    opts = {
-      -- add any options here
-    },
-    lazy = false,
-  }
+	{
+		"numToStr/Comment.nvim",
+		-- enabled = false,
+		opts = {
+			-- add any options here
+		},
+		lazy = false,
+	},
 }
