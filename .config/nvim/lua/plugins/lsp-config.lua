@@ -44,6 +44,23 @@ return {
 
 			lspconfig.tailwindcss.setup({
 				capabilities = capabilities,
+				-- filetypes = { "html", "elixir", "eelixir", "heex" },
+				init_options = {
+					userLanguages = {
+						elixir = "html-eex",
+						eelixir = "html-eex",
+						heex = "html-eex",
+					},
+				},
+				settings = {
+					tailwindCSS = {
+						experimental = {
+							classRegex = {
+								'class[:]\\s*"([^"]*)"',
+							},
+						},
+					},
+				},
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
