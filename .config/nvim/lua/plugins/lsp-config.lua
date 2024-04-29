@@ -6,6 +6,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"eslint-lsp",
+				"cssls",
 			},
 		},
 		config = function()
@@ -39,6 +40,10 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+			})
+
+			lspconfig.cssls.setup({
 				capabilities = capabilities,
 			})
 
