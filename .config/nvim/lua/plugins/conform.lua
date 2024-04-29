@@ -5,7 +5,7 @@ return {
 	cmd = { "ConformInfo" },
 	keys = {
 		{
-			-- Customize or remove this keymap to your liking
+      -- Customize or remove this keymap to your liking
 			"<leader>gF",
 			function()
 				require("conform").format({ async = true, lsp_fallback = true })
@@ -28,7 +28,7 @@ return {
 			css = { { "prettierd", "prettier" } },
 		},
 		-- Set up format-on-save
-		format_on_save = { timeout_ms = 500, lsp_fallback = true },
+		-- format_on_save = { timeout_ms = 500, lsp_fallback = true },
 		-- Customize formatters
 		formatters = {
 			shfmt = {
