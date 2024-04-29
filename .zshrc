@@ -77,37 +77,16 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo docker zsh-autosuggestions zsh-syntax-highlighting you-should-use asdf fd)
+plugins=(git sudo docker zsh-autosuggestions zsh-syntax-highlighting asdf fd dirhistory history)
 # plugins+=(zsh-vi-mode)
+eval $(thefuck --alias ff)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 . ~/.asdf/plugins/golang/set-env.zsh
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls='exa --icons'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 export PATH=~/bin:$PATH
@@ -115,6 +94,16 @@ alias cat=batcat
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 alias rad='./build/packages/rad/priv/rad'
+
+# add /usr/bin to path
+export PATH=~/usr/bin:$PATH
+
+# erlang
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# neovim
+export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH=~/bin:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
