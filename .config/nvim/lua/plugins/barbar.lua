@@ -9,6 +9,7 @@ return {
 		init = function()
 			local map = vim.api.nvim_set_keymap
 			local opts = { noremap = true, silent = true }
+      local open = true
 
 			-- Move to previous/next
 			map("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
@@ -27,6 +28,8 @@ return {
 			map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
 			map("n", "<Space>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
 			map("n", "<A-p>", "<Cmd>BufferPick<CR>", opts)
+      map("n", "<leader>ute", "<Cmd>BarbarEnable<CR>", opts)
+      map("n", "<leader>utd", "<Cmd>BarbarDisable<CR>", opts)
 
 			vim.g.barbar_auto_setup = false
 		end,
