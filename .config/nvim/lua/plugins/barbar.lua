@@ -26,10 +26,11 @@ return {
 			map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
 			map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
 			map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
-			map("n", "<Space>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
+			-- map("n", "<Space>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
 			map("n", "<A-p>", "<Cmd>BufferPick<CR>", opts)
       map("n", "<leader>ute", "<Cmd>BarbarEnable<CR>", opts)
       map("n", "<leader>utd", "<Cmd>BarbarDisable<CR>", opts)
+      map("n", "<leader>bd", "<Cmd>BufferClose<CR>", opts)
 
 			vim.g.barbar_auto_setup = false
 		end,
