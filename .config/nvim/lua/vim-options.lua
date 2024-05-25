@@ -50,3 +50,4 @@ vim.api.nvim_create_autocmd({ "CursorHold" }, {
 })
 
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]]) 
+
