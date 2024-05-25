@@ -1,0 +1,12 @@
+-- local lspconfig = require("lspconfig")
+-- local mason = require("mason")
+--
+-- mason.setup({
+--   opts = {
+--     ensure_installed = {
+--       "gopls"
+--     }
+--   }
+-- })
+--
+--
